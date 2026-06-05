@@ -1,0 +1,60 @@
+/* Custom premium styles for Expenstrack */
+
+/* Custom smooth scrollbars */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.05);
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+/* Dark mode scrollbars */
+[data-bs-theme="dark"] ::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+}
+[data-bs-theme="dark"] ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+}
+[data-bs-theme="dark"] ::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Sidebar behavior for active elements and links */
+.sidebar {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sidebar-nav-link:active {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Animation transitions */
+.stats-card, .chart-card, .filter-card, .form-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Nav Link overrides */
+.nav-link {
+    cursor: pointer;
+}
+
+/* Avatar styling */
+.avatar {
+    font-size: 0.95rem;
+    box-shadow: 0 4px 10px rgba(129, 138, 248, 0.3);
+}
+
+/* Mobile adjustments */
+@media (max-width: 991.98px) {
+    .sidebar.show {
+        box-shadow: 5px 0 25px rgba(0, 0, 0, 0.3);
+    }
+}
