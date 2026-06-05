@@ -173,7 +173,7 @@
                 <h6 class="text-uppercase text-muted fw-bold" style="font-size: 0.75rem;">Budget settings</h6>
                 <form action="${pageContext.request.contextPath}/dashboard" method="POST" class="mt-2">
                     <div class="input-group input-group-sm mb-2">
-                        <span class="input-group-text bg-dark border-secondary text-white">$</span>
+                        <span class="input-group-text bg-dark border-secondary text-white">₹</span>
                         <input type="number" class="form-control bg-dark border-secondary text-white" 
                                name="budget" value="${budget}" placeholder="Set budget" step="0.01" required>
                     </div>
@@ -215,7 +215,7 @@
                 <i class="bi bi-exclamation-octagon-fill fs-3"></i>
                 <div>
                     <h6 class="alert-heading fw-bold mb-1">Budget Alert!</h6>
-                    <span>You have exceeded your monthly budget of <strong>$${budget}</strong>. Your current spending is <strong>$${monthly}</strong>.</span>
+                    <span>You have exceeded your monthly budget of <strong>₹${budget}</strong>. Your current spending is <strong>₹${monthly}</strong>.</span>
                 </div>
             </div>
         </c:if>
@@ -223,7 +223,7 @@
         <c:if test="${not empty budget && not budgetExceeded}">
             <div class="alert alert-info border-0 bg-info bg-opacity-10 text-info rounded-4 p-3 mb-4 d-flex align-items-center gap-2">
                 <i class="bi bi-info-circle-fill"></i>
-                <span>Monthly spending is at <strong>$${monthly}</strong> of your <strong>$${budget}</strong> budget.</span>
+                <span>Monthly spending is at <strong>₹${monthly}</strong> of your <strong>₹${budget}</strong> budget.</span>
             </div>
         </c:if>
 
@@ -232,10 +232,10 @@
             <div class="col-md-3">
                 <div class="stats-card">
                     <div class="stats-icon icon-blue">
-                        <i class="bi bi-currency-dollar"></i>
+                        <i class="bi bi-currency-rupee"></i>
                     </div>
                     <div class="text-muted fw-medium" style="font-size: 0.85rem;">TOTAL EXPENSES</div>
-                    <h3 class="fw-bold mt-1 mb-0">$<c:out value="${total}" default="0.00" /></h3>
+                    <h3 class="fw-bold mt-1 mb-0">₹<c:out value="${total}" default="0.00" /></h3>
                 </div>
             </div>
             
@@ -245,7 +245,7 @@
                         <i class="bi bi-calendar-event"></i>
                     </div>
                     <div class="text-muted fw-medium" style="font-size: 0.85rem;">THIS MONTH</div>
-                    <h3 class="fw-bold mt-1 mb-0">$<c:out value="${monthly}" default="0.00" /></h3>
+                    <h3 class="fw-bold mt-1 mb-0">₹<c:out value="${monthly}" default="0.00" /></h3>
                 </div>
             </div>
 
@@ -258,10 +258,10 @@
                     <h3 class="fw-bold mt-1 mb-0">
                         <c:choose>
                             <c:when test="${not empty highest}">
-                                $${highest.amount}
+                                ₹${highest.amount}
                             </c:when>
                             <c:otherwise>
-                                $0.00
+                                ₹0.00
                             </c:otherwise>
                         </c:choose>
                     </h3>
@@ -280,7 +280,7 @@
                     <h3 class="fw-bold mt-1 mb-0">
                         <c:choose>
                             <c:when test="${not empty budget}">
-                                $${budget}
+                                ₹${budget}
                             </c:when>
                             <c:otherwise>
                                 Not Set
@@ -342,7 +342,7 @@
                                     </span>
                                 </td>
                                 <td>${e.expenseDate}</td>
-                                <td class="text-end fw-bold text-danger">-$${e.amount}</td>
+                                <td class="text-end fw-bold text-danger">-₹${e.amount}</td>
                             </tr>
                         </c:forEach>
                         <c:if test="${empty recent}">
@@ -464,7 +464,7 @@
             data: {
                 labels: trendLabels,
                 datasets: [{
-                    label: 'Expenses ($)',
+                    label: 'Expenses (₹)',
                     data: trendData,
                     backgroundColor: 'rgba(99, 102, 241, 0.85)',
                     hoverBackgroundColor: '#4f46e5',

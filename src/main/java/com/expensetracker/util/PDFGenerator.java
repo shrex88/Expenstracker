@@ -46,9 +46,9 @@ public class PDFGenerator {
             contentStream.showText("Summary Stats:");
             contentStream.setFont(PDType1Font.HELVETICA, 11);
             contentStream.newLineAtOffset(0, -15);
-            contentStream.showText("Total Expenses: $" + String.format("%.2f", total));
+            contentStream.showText("Total Expenses: INR " + String.format("%.2f", total));
             contentStream.newLineAtOffset(0, -15);
-            contentStream.showText("Highest Expense: $" + String.format("%.2f", highest));
+            contentStream.showText("Highest Expense: INR " + String.format("%.2f", highest));
             contentStream.newLineAtOffset(0, -15);
             contentStream.showText("Total Transactions: " + expenses.size());
             contentStream.endText();
@@ -123,7 +123,7 @@ public class PDFGenerator {
                 contentStream.showText(e.getExpenseDate().format(formatter));
                 
                 contentStream.newLineAtOffset(110, 0);
-                contentStream.showText("$" + String.format("%.2f", e.getAmount()));
+                contentStream.showText("INR " + String.format("%.2f", e.getAmount()));
                 
                 contentStream.endText();
                 

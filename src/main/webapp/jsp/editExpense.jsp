@@ -175,7 +175,7 @@
 
                 <div class="row mb-3">
                     <div class="col-md-6">
-                        <label for="amount" class="form-label fw-semibold">Amount ($)</label>
+                        <label for="amount" class="form-label fw-semibold">Amount (₹)</label>
                         <input type="number" class="form-control" id="amount" name="amount" value="${expense.amount}" step="0.01" min="0.01" required>
                     </div>
                     <div class="col-md-6">

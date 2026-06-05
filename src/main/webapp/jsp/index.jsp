@@ -228,7 +228,7 @@
                                     </span>
                                 </td>
                                 <td>${e.expenseDate}</td>
-                                <td class="fw-bold text-danger">-$${e.amount}</td>
+                                <td class="fw-bold text-danger">-₹${e.amount}</td>
                                 <td class="text-end">
                                     <div class="d-inline-flex gap-2">
                                         <a href="${pageContext.request.contextPath}/expenses?action=edit&id=${e.id}" class="btn btn-sm btn-outline-primary">
