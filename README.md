@@ -220,7 +220,7 @@ https://github.com/shrex88/Expenstracker
 
 ## 👨‍💻 Author
 
-**Shreyas Poojary**
+**Shreyas B Palan (Poojary)**
 
 Developed as a full-stack Java web application project to simplify personal expense tracking and financial management.
 
